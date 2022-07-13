@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_switch/flutter_switch.dart';
 import 'package:riderapp/data/orderdata.dart';
 import 'package:riderapp/screen%20/orderdetails.dart';
 import 'package:riderapp/widget/neworderwidget.dart';
@@ -111,10 +112,18 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         actions: [
-          Switch(
-            onChanged: toggleSwitch,
-            value: isSwitched,
+          FlutterSwitch(
+            width: 100,
+            showOnOff: true,
             activeColor: Theme.of(context).primaryColor,
+            activeTextColor: Colors.white,
+            inactiveTextColor: Colors.grey,
+            value: isSwitched,
+            onToggle: (val) {
+              setState(() {
+                isSwitched = val;
+              });
+            },
           ),
         ],
         title: Image.asset("image/logo-1.png"),

@@ -3,7 +3,9 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:riderapp/navbarscreen/historyscreen.dart';
 import 'package:riderapp/navbarscreen/homescreen.dart';
 import 'package:riderapp/navbarscreen/progresscreen.dart';
+import 'package:riderapp/screen%20/bankinfoscreen.dart';
 import 'package:riderapp/screen%20/helpsupportscreen.dart';
+import 'package:riderapp/screen%20/languagescreen.dart';
 import 'package:riderapp/screen%20/loginscreen.dart';
 import 'package:riderapp/screen%20/profillescreen.dart';
 import 'package:riderapp/widget/menubtn.dart';
@@ -33,7 +35,8 @@ class _NavbarScreenState extends State<NavbarScreen> {
       MenuButton(
           icons: SvgPicture.asset("icons/cardIcon.svg"),
           name: "Bank Info",
-          func: () {}),
+          func: () => Navigator.push(context,
+              MaterialPageRoute(builder: (context) => const BankInfoScreen()))),
       MenuButton(
           icons: SvgPicture.asset("icons/ratingsIcon.svg"),
           name: "Ratings",
@@ -51,6 +54,11 @@ class _NavbarScreenState extends State<NavbarScreen> {
                   builder: (context) => const HelpAndSupportScreen()))),
       MenuButton(
           icons: SvgPicture.asset("icons/langangeicon.svg"),
+          name: "Language",
+          func: () => Navigator.push(context,
+              MaterialPageRoute(builder: (context) => const LanguageScreen()))),
+      MenuButton(
+          icons: SvgPicture.asset("icons/insurance.svg"),
           name: "Insurance",
           func: () {}),
       MenuButton(

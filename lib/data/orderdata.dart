@@ -500,3 +500,151 @@ List todayOrderList = [
     "distance": 4.8
   },
 ];
+
+List weeklyList = [
+  {
+    "date": "Sunday, 12th Jan 2022",
+    "data": [
+      {
+        "image": "assets/logo-restro.png",
+        "name": "Dominos",
+        "orderNo": 100070,
+        "amount": 80,
+        "time": 40,
+        "distance": 4.8
+      },
+      {
+        "image": "assets/logo-restro.png",
+        "name": "Dominos",
+        "orderNo": 100070,
+        "amount": 80,
+        "time": 40,
+        "distance": 4.8
+      }
+    ]
+  },
+  {
+    "date": "Saturday, 11th Jan 2022",
+    "data": [
+      {
+        "image": "assets/logo-restro.png",
+        "name": "Dominos",
+        "orderNo": 100070,
+        "amount": 80,
+        "time": 40,
+        "distance": 4.8
+      },
+      {
+        "image": "assets/logo-restro.png",
+        "name": "Dominos",
+        "orderNo": 100070,
+        "amount": 80,
+        "time": 40,
+        "distance": 4.8
+      },
+      {
+        "image": "assets/logo-restro.png",
+        "name": "Dominos",
+        "orderNo": 100070,
+        "amount": 80,
+        "time": 40,
+        "distance": 4.8
+      },
+      {
+        "image": "assets/logo-restro.png",
+        "name": "Dominos",
+        "orderNo": 100070,
+        "amount": 80,
+        "time": 40,
+        "distance": 4.8
+      }
+    ]
+  },
+  {
+    "date": "Friday, 10th Jan 2022",
+    "data": [
+      {
+        "image": "assets/logo-restro.png",
+        "name": "Dominos",
+        "orderNo": 100070,
+        "amount": 80,
+        "time": 40,
+        "distance": 4.8
+      },
+    ]
+  }
+];
+
+List monthlyList = [
+  {
+    "month": "December 2021",
+    "data": [
+      {
+        "image": "assets/logo-restro.png",
+        "name": "Dominos",
+        "orderNo": 100070,
+        "amount": 80,
+        "time": 40,
+        "distance": 4.8
+      },
+      {
+        "image": "assets/logo-restro.png",
+        "name": "Dominos",
+        "orderNo": 100070,
+        "amount": 80,
+        "time": 40,
+        "distance": 4.8
+      },
+      {
+        "image": "assets/logo-restro.png",
+        "name": "Dominos",
+        "orderNo": 100070,
+        "amount": 80,
+        "time": 40,
+        "distance": 4.8
+      },
+    ]
+  },
+  {
+    "month": "November 2021",
+    "data": [
+      {
+        "image": "assets/logo-restro.png",
+        "name": "Dominos",
+        "orderNo": 100070,
+        "amount": 80,
+        "time": 40,
+        "distance": 4.8
+      },
+      {
+        "image": "assets/logo-restro.png",
+        "name": "Dominos",
+        "orderNo": 100070,
+        "amount": 80,
+        "time": 40,
+        "distance": 4.8
+      },
+    ]
+  },
+  {
+    "month": "August 2021",
+    "data": [
+      {
+        "image": "assets/logo-restro.png",
+        "name": "Dominos",
+        "orderNo": 100070,
+        "amount": 80,
+        "time": 40,
+        "distance": 4.8
+      },
+      {
+        "image": "assets/logo-restro.png",
+        "name": "Dominos",
+        "orderNo": 100070,
+        "amount": 80,
+        "time": 40,
+        "distance": 4.8
+      },
+    ]
+  }
+];

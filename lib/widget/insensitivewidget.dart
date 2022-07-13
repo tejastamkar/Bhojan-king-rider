@@ -1,3 +1,4 @@
+import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
 import 'package:riderapp/data/orderdata.dart';
 
@@ -218,34 +219,106 @@ class _InsensitiveWidgetState extends State<InsensitiveWidget>
                           image: todayOrderList[index]["image"],
                           distance: todayOrderList[index]["distance"])),
                 ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 10),
-                  child: ListView.builder(
-                      physics: const NeverScrollableScrollPhysics(),
-                      shrinkWrap: true,
-                      itemCount: todayOrderList.length,
-                      itemBuilder: (context, index) => orderDetailCard(
-                          name: todayOrderList[index]["name"],
-                          orderNo: todayOrderList[index]["orderNo"],
-                          earning: todayOrderList[index]["amount"],
-                          time: todayOrderList[index]["time"],
-                          image: todayOrderList[index]["image"],
-                          distance: todayOrderList[index]["distance"])),
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 10),
-                  child: ListView.builder(
-                      physics: const NeverScrollableScrollPhysics(),
-                      shrinkWrap: true,
-                      itemCount: todayOrderList.length,
-                      itemBuilder: (context, index) => orderDetailCard(
-                          name: todayOrderList[index]["name"],
-                          orderNo: todayOrderList[index]["orderNo"],
-                          earning: todayOrderList[index]["amount"],
-                          time: todayOrderList[index]["time"],
-                          image: todayOrderList[index]["image"],
-                          distance: todayOrderList[index]["distance"])),
-                ),
+                ListView.builder(
+                    shrinkWrap: true,
+                    itemCount: weeklyList.length,
+                    itemBuilder: (BuildContext context, int index) {
+                      List data = weeklyList[index]["data"];
+                      return ExpandablePanel(
+                          header: Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 20),
+                            child: Text(
+                              weeklyList[index]["date"],
+                              style: const TextStyle(
+                                  fontSize: 18, fontWeight: FontWeight.w700),
+                            ),
+                          ),
+                          collapsed: const SizedBox(),
+                          theme: const ExpandableThemeData(
+                            headerAlignment:
+                                ExpandablePanelHeaderAlignment.center,
+                            tapBodyToCollapse: true,
+                            // expandIcon: Icons.keyboard_arrow_right,
+                          ),
+                          expanded: ListView.builder(
+                              itemCount: data.length,
+                              shrinkWrap: true,
+                              itemBuilder: (context, index) {
+                                return orderDetailCard(
+                                    name: data[index]["name"],
+                                    orderNo: data[index]["orderNo"],
+                                    earning: data[index]["amount"],
+                                    time: data[index]["time"],
+                                    image: data[index]["image"],
+                                    distance: data[index]["distance"]);
+                              }),
+                          builder: (_, collapsed, expanded) {
+                            return Padding(
+                              padding: const EdgeInsets.only(
+                                  left: 10, right: 10, bottom: 10),
+                              child: Expandable(
+                                collapsed: collapsed,
+                                expanded: Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      vertical: 10, horizontal: 20),
+                                  child: expanded,
+                                ),
+                                theme: const ExpandableThemeData(
+                                    crossFadePoint: 0),
+                              ),
+                            );
+                          });
+                    }),
+                ListView.builder(
+                    shrinkWrap: true,
+                    itemCount: monthlyList.length,
+                    itemBuilder: (BuildContext context, int index) {
+                      List data = monthlyList[index]["data"];
+                      return ExpandablePanel(
+                          header: Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 20),
+                            child: Text(
+                              monthlyList[index]["month"],
+                              style: const TextStyle(
+                                  fontSize: 18, fontWeight: FontWeight.w700),
+                            ),
+                          ),
+                          collapsed: const SizedBox(),
+                          theme: const ExpandableThemeData(
+                            headerAlignment:
+                                ExpandablePanelHeaderAlignment.center,
+                            tapBodyToCollapse: true,
+                            // expandIcon: Icons.keyboard_arrow_right,
+                          ),
+                          expanded: ListView.builder(
+                              itemCount: data.length,
+                              shrinkWrap: true,
+                              itemBuilder: (context, index) {
+                                return orderDetailCard(
+                                    name: data[index]["name"],
+                                    orderNo: data[index]["orderNo"],
+                                    earning: data[index]["amount"],
+                                    time: data[index]["time"],
+                                    image: data[index]["image"],
+                                    distance: data[index]["distance"]);
+                              }),
+                          builder: (_, collapsed, expanded) {
+                            return Padding(
+                              padding: const EdgeInsets.only(
+                                  left: 10, right: 10, bottom: 10),
+                              child: Expandable(
+                                collapsed: collapsed,
+                                expanded: Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      vertical: 10, horizontal: 20),
+                                  child: expanded,
+                                ),
+                                theme: const ExpandableThemeData(
+                                    crossFadePoint: 0),
+                              ),
+                            );
+                          });
+                    }),
               ]),
         )
       ],
