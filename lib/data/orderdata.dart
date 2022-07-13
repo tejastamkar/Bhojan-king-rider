@@ -457,3 +457,46 @@ List weekly = [
     ]
   },
 ];
+
+List todayOrderList = [
+  {
+    "image": "assets/logo-restro.png",
+    "name": "Dominos",
+    "orderNo": 100070,
+    "amount": 80,
+    "time": 40,
+    "distance": 4.8
+  },
+  {
+    "image": "assets/logo-restro.png",
+    "name": "Dominos",
+    "orderNo": 100070,
+    "amount": 80,
+    "time": 40,
+    "distance": 4.8
+  },
+  {
+    "image": "assets/logo-restro.png",
+    "name": "Dominos",
+    "orderNo": 100070,
+    "amount": 80,
+    "time": 40,
+    "distance": 4.8
+  },
+  {
+    "image": "assets/logo-restro.png",
+    "name": "Dominos",
+    "orderNo": 100070,
+    "amount": 80,
+    "time": 40,
+    "distance": 4.8
+  },
+  {
+    "image": "assets/logo-restro.png",
+    "name": "Dominos",
+    "orderNo": 100070,
+    "amount": 80,
+    "time": 40,
+    "distance": 4.8
+  },
+];
