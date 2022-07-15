@@ -117,7 +117,7 @@ class _HomeScreenState extends State<HomeScreen> {
             showOnOff: true,
             activeColor: Theme.of(context).primaryColor,
             activeTextColor: Colors.white,
-            inactiveTextColor: Colors.grey,
+            inactiveTextColor: Colors.black,
             value: isSwitched,
             onToggle: (val) {
               setState(() {
@@ -142,7 +142,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     const Spacer(),
                     Container(
                       padding: const EdgeInsets.symmetric(
-                          horizontal: 40, vertical: 40),
+                          horizontal: 25, vertical: 40),
                       color: Colors.white,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.center,

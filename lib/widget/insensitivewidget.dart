@@ -131,14 +131,13 @@ class _InsensitiveWidgetState extends State<InsensitiveWidget>
       children: [
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10),
-          child: Card(
-            color: Colors.white,
-            elevation: 0,
-            shape: RoundedRectangleBorder(
+          child: Container(
+            width: width,
+            decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(4),
+              color: Colors.white,
             ),
-            child: SizedBox(
-              width: width,
+            child: Center(
               child: TabBar(
                 indicator: BoxDecoration(
                     borderRadius: BorderRadius.circular(4),

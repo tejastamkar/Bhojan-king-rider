@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:riderapp/data/userdata.dart';
+import 'package:riderapp/widget/bottombankpop.dart';
 
 class BankInfoScreen extends StatefulWidget {
   const BankInfoScreen({Key? key}) : super(key: key);
@@ -13,24 +14,8 @@ class _BankInfoScreenState extends State<BankInfoScreen> {
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
 
-    BankInfo() => showModalBottomSheet(
-        builder: (context) => SingleChildScrollView(
-                child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                const Text(
-                  "Bank Name",
-                  style: TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
-                ),
-                Card(
-                  child: Padding(
-                    padding: EdgeInsets.all(8),
-                    child: TextFormField(),
-                  ),
-                )
-              ],
-            )),
-        context: context);
+    bankInfo() => showModalBottomSheet(
+        builder: (context) => const BottomBankPop(), context: context);
 
     return Scaffold(
       appBar: AppBar(
@@ -161,7 +146,7 @@ class _BankInfoScreenState extends State<BankInfoScreen> {
                         borderRadius: BorderRadius.circular(6)),
                     onPrimary: Colors.white,
                     primary: Theme.of(context).primaryColor),
-                onPressed: (() => BankInfo()),
+                onPressed: (() => bankInfo()),
                 child: const Text(
                   "Edit",
                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),

@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:riderapp/navbarscreen/historyscreen.dart';
 import 'package:riderapp/navbarscreen/homescreen.dart';
 import 'package:riderapp/navbarscreen/progresscreen.dart';
+import 'package:riderapp/screen%20/assetsscreen.dart';
 import 'package:riderapp/screen%20/bankinfoscreen.dart';
 import 'package:riderapp/screen%20/helpsupportscreen.dart';
 import 'package:riderapp/screen%20/languagescreen.dart';
@@ -44,7 +45,8 @@ class _NavbarScreenState extends State<NavbarScreen> {
       MenuButton(
           icons: SvgPicture.asset("icons/assetsIcons.svg"),
           name: "Assets",
-          func: () {}),
+          func: () => Navigator.push(context,
+              MaterialPageRoute(builder: (context) => const AssetsScreen()))),
       MenuButton(
           icons: SvgPicture.asset("icons/helpicon.svg"),
           name: "Help",
