@@ -6,9 +6,13 @@ import 'package:riderapp/navbarscreen/progresscreen.dart';
 import 'package:riderapp/screen%20/assetsscreen.dart';
 import 'package:riderapp/screen%20/bankinfoscreen.dart';
 import 'package:riderapp/screen%20/helpsupportscreen.dart';
+import 'package:riderapp/screen%20/insurancescreen.dart';
 import 'package:riderapp/screen%20/languagescreen.dart';
 import 'package:riderapp/screen%20/loginscreen.dart';
+import 'package:riderapp/screen%20/privacypolicyscreen.dart';
 import 'package:riderapp/screen%20/profillescreen.dart';
+import 'package:riderapp/screen%20/ratingscreen.dart';
+import 'package:riderapp/screen%20/termsandcondition.dart';
 import 'package:riderapp/widget/menubtn.dart';
 
 class NavbarScreen extends StatefulWidget {
@@ -41,7 +45,8 @@ class _NavbarScreenState extends State<NavbarScreen> {
       MenuButton(
           icons: SvgPicture.asset("icons/ratingsIcon.svg"),
           name: "Ratings",
-          func: () {}),
+          func: () => Navigator.push(context,
+              MaterialPageRoute(builder: (context) => const RatingScreen()))),
       MenuButton(
           icons: SvgPicture.asset("icons/assetsIcons.svg"),
           name: "Assets",
@@ -62,11 +67,17 @@ class _NavbarScreenState extends State<NavbarScreen> {
       MenuButton(
           icons: SvgPicture.asset("icons/insurance.svg"),
           name: "Insurance",
-          func: () {}),
+          func: () => Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => const InsuranceScreen()))),
       MenuButton(
           icons: SvgPicture.asset("icons/ClipboardCheck.svg"),
           name: "Privacy Policy",
-          func: () {}),
+          func: () => Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => const PrivacyPolicyScreen()))),
       MenuButton(
           icons: SvgPicture.asset(
             "icons/FileEarmarkText.svg",
@@ -74,7 +85,10 @@ class _NavbarScreenState extends State<NavbarScreen> {
             height: 30,
           ),
           name: "Term & Condition",
-          func: () {}),
+          func: () => Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => const TermsAndCondition()))),
       MenuButton(
           icons: SvgPicture.asset(
             "icons/logout.svg",

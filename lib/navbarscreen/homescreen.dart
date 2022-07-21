@@ -136,10 +136,10 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               Padding(
                 padding:
-                    const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                    const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
                 child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    const Spacer(),
                     Container(
                       padding: const EdgeInsets.symmetric(
                           horizontal: 25, vertical: 40),
@@ -245,7 +245,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       children: [
                         Container(
                           padding: const EdgeInsets.symmetric(
-                              horizontal: 20, vertical: 5),
+                              horizontal: 10, vertical: 5),
                           color: Colors.white,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
@@ -322,7 +322,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                         Container(
                           padding: const EdgeInsets.symmetric(
-                              horizontal: 20, vertical: 5),
+                              horizontal: 10, vertical: 5),
                           color: Colors.white,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
@@ -396,7 +396,6 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ],
                     ),
-                    const Spacer(),
                   ],
                 ),
               ),
