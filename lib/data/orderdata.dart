@@ -1,3 +1,14 @@
+List newOrderData = [
+  {
+    "items": {
+      1: {"name": "Veg wrap", "count": 1, "price": 140},
+      2: {"name": "Veg Bowl", "count": 2, "price": 180}
+    },
+    "DeliveryCharges": 50,
+    "Taxs": 60
+  }
+];
+
 List deliveredOrderData = [
   {
     "orderId": 1204,

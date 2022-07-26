@@ -4,6 +4,8 @@ import 'package:riderapp/data/orderdata.dart';
 import 'package:riderapp/screen%20/orderdetails.dart';
 import 'package:riderapp/widget/neworderwidget.dart';
 
+bool isSwitched = false;
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
@@ -12,7 +14,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  bool isSwitched = false;
   void toggleSwitch(bool value) {
     if (isSwitched == false) {
       setState(() {
@@ -27,6 +28,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    bool checkactive = activeOrder;
     double width = MediaQuery.of(context).size.width;
     Widget orderCard({
       required int index,
@@ -399,9 +401,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
               ),
-              const Text(
-                "New Orders",
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+              Text(
+                checkactive ? "Active Order" : "New Orders",
+                style:
+                    const TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
               ),
               const Padding(
                 padding: EdgeInsets.all(10),
